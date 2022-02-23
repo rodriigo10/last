@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		355AA64727C5BACD00B314C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355AA64527C5BACD00B314C0 /* LaunchScreen.storyboard */; };
 		355AA65227C5BAD000B314C0 /* newGitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA65127C5BAD000B314C0 /* newGitTests.swift */; };
 		355AA65D27C5BAD000B314C0 /* newGitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA65C27C5BAD000B314C0 /* newGitUITests.swift */; };
+		355AA67627C5C98900B314C0 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA67527C5C98900B314C0 /* Movies.swift */; };
 		8BAD8B06EE92014269C02A53 /* Pods_newGit_newGitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE2444675A03673B722028A /* Pods_newGit_newGitUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		355AA65827C5BAD000B314C0 /* newGitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newGitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		355AA65C27C5BAD000B314C0 /* newGitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newGitUITests.swift; sourceTree = "<group>"; };
 		355AA65E27C5BAD000B314C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355AA67527C5C98900B314C0 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		43463E2AB77AE5EA952B2E48 /* Pods-newGit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGit.debug.xcconfig"; path = "Target Support Files/Pods-newGit/Pods-newGit.debug.xcconfig"; sourceTree = "<group>"; };
 		4AD29E4F960D7045805B6119 /* Pods-newGit-newGitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGit-newGitUITests.release.xcconfig"; path = "Target Support Files/Pods-newGit-newGitUITests/Pods-newGit-newGitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8B131394DF0938B4F3BAE86A /* Pods-newGitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGitTests.release.xcconfig"; path = "Target Support Files/Pods-newGitTests/Pods-newGitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				355AA63A27C5BAAF00B314C0 /* AppDelegate.swift */,
 				355AA63C27C5BAAF00B314C0 /* SceneDelegate.swift */,
 				355AA63E27C5BAAF00B314C0 /* ViewController.swift */,
+				355AA67527C5C98900B314C0 /* Movies.swift */,
 				355AA64027C5BAB000B314C0 /* Main.storyboard */,
 				355AA64327C5BACD00B314C0 /* Assets.xcassets */,
 				355AA64527C5BACD00B314C0 /* LaunchScreen.storyboard */,
@@ -155,7 +158,6 @@
 				91656C6B3D648315A4846F59 /* Pods-newGitTests.debug.xcconfig */,
 				8B131394DF0938B4F3BAE86A /* Pods-newGitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +411,7 @@
 			files = (
 				355AA63F27C5BAB000B314C0 /* ViewController.swift in Sources */,
 				355AA63B27C5BAAF00B314C0 /* AppDelegate.swift in Sources */,
+				355AA67627C5C98900B314C0 /* Movies.swift in Sources */,
 				355AA63D27C5BAAF00B314C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

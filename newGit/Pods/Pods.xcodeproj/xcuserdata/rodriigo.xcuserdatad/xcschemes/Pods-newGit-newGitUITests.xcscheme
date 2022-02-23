@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DED82D4DA7FBF40493F05A16A27F9110"
-               BuildableName = "Pods-newGit-newGitUITests.framework"
+               BuildableName = "Pods_newGit_newGitUITests.framework"
                BlueprintName = "Pods-newGit-newGitUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
