@@ -21,13 +21,43 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="151" id="r1O-5Z-AdB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="151" id="r1O-5Z-AdB" customClass="TitleFilmsTableViewCell" customModule="newGit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r1O-5Z-AdB" id="ESr-8y-XfV">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OIH-Tc-nMb">
+                                                    <rect key="frame" x="0.0" y="3" width="97" height="143"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="5Vc-e1-MKW"/>
+                                                        <constraint firstAttribute="height" constant="145" id="ddu-fz-Efv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTK-dJ-ahV">
+                                                    <rect key="frame" x="102" y="3" width="289" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="289" id="Z30-GI-sW9"/>
+                                                        <constraint firstAttribute="height" constant="44" id="v37-Hj-A3p"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OIH-Tc-nMb" firstAttribute="leading" secondItem="ESr-8y-XfV" secondAttribute="leading" id="63u-ji-cC0"/>
+                                                <constraint firstItem="BTK-dJ-ahV" firstAttribute="top" secondItem="ESr-8y-XfV" secondAttribute="top" constant="3" id="DBU-D3-XOU"/>
+                                                <constraint firstItem="BTK-dJ-ahV" firstAttribute="leading" secondItem="OIH-Tc-nMb" secondAttribute="trailing" constant="5" id="YY2-km-pws"/>
+                                                <constraint firstAttribute="bottom" secondItem="OIH-Tc-nMb" secondAttribute="bottom" constant="5" id="f9x-EV-3gg"/>
+                                                <constraint firstItem="OIH-Tc-nMb" firstAttribute="top" secondItem="ESr-8y-XfV" secondAttribute="top" constant="3" id="zWi-GC-b7R"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageTitle" destination="OIH-Tc-nMb" id="p4r-AQ-63v"/>
+                                            <outlet property="labelTitle" destination="BTK-dJ-ahV" id="CiX-mw-7t5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

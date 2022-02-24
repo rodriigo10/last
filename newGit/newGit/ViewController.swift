@@ -10,7 +10,7 @@ import Alamofire
 
 
 class ViewController: UIViewController {
-
+    
     
     var minhasMovies: Movies?
     
@@ -22,17 +22,15 @@ class ViewController: UIViewController {
         setConfig()
         setRequest()
     }
-
     
     func setConfig () {
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        
     }
-
+    
     func setRequest () {
-        AF.request("https://sky-frontend.herokuapp.com/movies/", method: .get).responseJSON { responseRequest in
+        AF.request("https://sky-frontend.herokuapp.com/movies", method: .get).responseJSON { responseRequest in
             if let responseRequestChecker = responseRequest.data {
                 let movies = try? JSONDecoder().decode(Movies.self, from: responseRequestChecker)
                 self.minhasMovies = movies
@@ -40,23 +38,27 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        //        let tapped = self.storyboard?.instantiateViewController(withIdentifier: "titleSelected")
+        //        if let selectTapped = tapped {
+        //            self.present(selectTapped, animated: true, completion: nil)
+        //        }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return minhasMovies?.contents?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TitleFilmsTableViewCell
+        cell?.setConfigCell(object: minhasMovies?.contents?[indexPath.row])
+        return cell ?? UITableViewCell()
     }
 }
 
