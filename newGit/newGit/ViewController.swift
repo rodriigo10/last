@@ -42,10 +42,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let tapped = self.storyboard?.instantiateViewController(withIdentifier: "titleSelected")
-        //        if let selectTapped = tapped {
-        //            self.present(selectTapped, animated: true, completion: nil)
-        //        }
+        let tapped = self.storyboard?.instantiateViewController(withIdentifier: "titleSelected") as? TitleSelectedViewController
+        if let selectTapped = tapped {
+            selectTapped.modalPresentationStyle = .fullScreen
+            selectTapped.configFilm = minhasMovies?.contents?[indexPath.row]
+            
+            self.present(selectTapped, animated: true, completion: nil)
+        }
     }
 }
 

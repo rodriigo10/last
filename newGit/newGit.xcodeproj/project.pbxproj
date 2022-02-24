@@ -20,6 +20,7 @@
 		355AA67627C5C98900B314C0 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA67527C5C98900B314C0 /* Movies.swift */; };
 		8BAD8B06EE92014269C02A53 /* Pods_newGit_newGitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE2444675A03673B722028A /* Pods_newGit_newGitUITests.framework */; };
 		AC59406727C7260400E0C78A /* TitleFilmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59406627C7260400E0C78A /* TitleFilmsTableViewCell.swift */; };
+		AC59406927C738F500E0C78A /* TitleSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59406827C738F500E0C78A /* TitleSelectedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		91656C6B3D648315A4846F59 /* Pods-newGitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGitTests.debug.xcconfig"; path = "Target Support Files/Pods-newGitTests/Pods-newGitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5DFC868241AB2DC1A33D7C6 /* Pods-newGit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGit.release.xcconfig"; path = "Target Support Files/Pods-newGit/Pods-newGit.release.xcconfig"; sourceTree = "<group>"; };
 		AC59406627C7260400E0C78A /* TitleFilmsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleFilmsTableViewCell.swift; sourceTree = "<group>"; };
+		AC59406827C738F500E0C78A /* TitleSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSelectedViewController.swift; sourceTree = "<group>"; };
 		C30AF3F74257510730C1C231 /* Pods_newGit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newGit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D7E97FEC129AFF7E510368 /* Pods-newGit-newGitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGit-newGitUITests.debug.xcconfig"; path = "Target Support Files/Pods-newGit-newGitUITests/Pods-newGit-newGitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				355AA67527C5C98900B314C0 /* Movies.swift */,
 				355AA64027C5BAB000B314C0 /* Main.storyboard */,
 				AC59406627C7260400E0C78A /* TitleFilmsTableViewCell.swift */,
+				AC59406827C738F500E0C78A /* TitleSelectedViewController.swift */,
 				355AA64327C5BACD00B314C0 /* Assets.xcassets */,
 				355AA64527C5BACD00B314C0 /* LaunchScreen.storyboard */,
 				355AA64827C5BACD00B314C0 /* Info.plist */,
@@ -416,6 +419,7 @@
 				355AA63B27C5BAAF00B314C0 /* AppDelegate.swift in Sources */,
 				355AA67627C5C98900B314C0 /* Movies.swift in Sources */,
 				AC59406727C7260400E0C78A /* TitleFilmsTableViewCell.swift in Sources */,
+				AC59406927C738F500E0C78A /* TitleSelectedViewController.swift in Sources */,
 				355AA63D27C5BAAF00B314C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
