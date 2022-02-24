@@ -32,17 +32,21 @@ class ViewController: UIViewController {
     }
 
     func setRequest () {
-        AF.request("https://sky-frontend.herokuapp.com/movies/", method: .get).responseJSON { responseData in
-            
-            let movies = try? JSONDecoder().decode(Movies.self, from: responseData ?? Data())
-            self.minhasMovies = movies
+        AF.request("https://sky-frontend.herokuapp.com/movies/", method: .get).responseJSON { responseRequest in
+            if let responseRequestChecker = responseRequest.data {
+                let movies = try? JSONDecoder().decode(Movies.self, from: responseRequestChecker)
+                self.minhasMovies = movies
+                self.mainTableView.reloadData()
+            }
         }
     }
     
 }
 
 extension ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 }
 
 extension ViewController: UITableViewDataSource {
