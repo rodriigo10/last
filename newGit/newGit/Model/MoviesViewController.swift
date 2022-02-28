@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 
-class ViewController: UIViewController {
+class MoviesViewController: UIViewController {
     
     
     var minhasMovies: Movies?
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension MoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tapped = self.storyboard?.instantiateViewController(withIdentifier: "titleSelected") as? TitleSelectedViewController
         if let selectTapped = tapped {
@@ -52,7 +52,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension MoviesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return minhasMovies?.contents?.count ?? 0

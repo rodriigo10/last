@@ -10,10 +10,11 @@ import SDWebImage
 
 class TitleFilmsTableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var imageTitle: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     
-    override func awakeFromNib() {
+    override func awakeFromNib() 
         super.awakeFromNib()
         
     }
