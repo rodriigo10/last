@@ -12,7 +12,7 @@ extension MoviesViewController: UITableViewDelegate {
         let tapped = self.storyboard?.instantiateViewController(withIdentifier: "titleSelected") as? TitleSelectedViewController
         if let selectTapped = tapped {
             selectTapped.modalPresentationStyle = .fullScreen
-            selectTapped.configFilm = minhasMovies?.contents?[indexPath.row]
+            selectTapped.configFilm = minhaMovies?.contents?[indexPath.row]
             
             self.present(selectTapped, animated: true, completion: nil)
         }

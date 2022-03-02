@@ -21,6 +21,8 @@
 		355C22CE27CD27E500DB1347 /* MoviesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C22CD27CD27E500DB1347 /* MoviesTableViewDataSource.swift */; };
 		355C22D327CD2A8400DB1347 /* MoviesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C22D227CD2A8400DB1347 /* MoviesTableViewDelegate.swift */; };
 		355C22E027CD2C4100DB1347 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C22DF27CD2C4100DB1347 /* Request.swift */; };
+		35D4EBAE27CF19DB00ABFD72 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4EBAD27CF19DB00ABFD72 /* MoviesController.swift */; };
+		35D4EBB327CF19F100ABFD72 /* TitleSelectedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4EBB227CF19F100ABFD72 /* TitleSelectedController.swift */; };
 		8BAD8B06EE92014269C02A53 /* Pods_newGit_newGitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE2444675A03673B722028A /* Pods_newGit_newGitUITests.framework */; };
 		AC59406727C7260400E0C78A /* TitleFilmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59406627C7260400E0C78A /* TitleFilmsTableViewCell.swift */; };
 		AC59406927C738F500E0C78A /* TitleSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59406827C738F500E0C78A /* TitleSelectedViewController.swift */; };
@@ -64,6 +66,8 @@
 		355C22CD27CD27E500DB1347 /* MoviesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewDataSource.swift; sourceTree = "<group>"; };
 		355C22D227CD2A8400DB1347 /* MoviesTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewDelegate.swift; sourceTree = "<group>"; };
 		355C22DF27CD2C4100DB1347 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		35D4EBAD27CF19DB00ABFD72 /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
+		35D4EBB227CF19F100ABFD72 /* TitleSelectedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSelectedController.swift; sourceTree = "<group>"; };
 		43463E2AB77AE5EA952B2E48 /* Pods-newGit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGit.debug.xcconfig"; path = "Target Support Files/Pods-newGit/Pods-newGit.debug.xcconfig"; sourceTree = "<group>"; };
 		4AD29E4F960D7045805B6119 /* Pods-newGit-newGitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGit-newGitUITests.release.xcconfig"; path = "Target Support Files/Pods-newGit-newGitUITests/Pods-newGit-newGitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8B131394DF0938B4F3BAE86A /* Pods-newGitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGitTests.release.xcconfig"; path = "Target Support Files/Pods-newGitTests/Pods-newGitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		355C22DB27CD2B2700DB1347 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				35D4EBAD27CF19DB00ABFD72 /* MoviesController.swift */,
+				35D4EBB227CF19F100ABFD72 /* TitleSelectedController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -480,12 +486,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D4EBAE27CF19DB00ABFD72 /* MoviesController.swift in Sources */,
 				355C22CE27CD27E500DB1347 /* MoviesTableViewDataSource.swift in Sources */,
 				355C22D327CD2A8400DB1347 /* MoviesTableViewDelegate.swift in Sources */,
 				355AA63F27C5BAB000B314C0 /* MoviesViewController.swift in Sources */,
 				355AA63B27C5BAAF00B314C0 /* AppDelegate.swift in Sources */,
 				355AA67627C5C98900B314C0 /* Movies.swift in Sources */,
 				AC59406727C7260400E0C78A /* TitleFilmsTableViewCell.swift in Sources */,
+				35D4EBB327CF19F100ABFD72 /* TitleSelectedController.swift in Sources */,
 				AC59406927C738F500E0C78A /* TitleSelectedViewController.swift in Sources */,
 				355C22E027CD2C4100DB1347 /* Request.swift in Sources */,
 				355AA63D27C5BAAF00B314C0 /* SceneDelegate.swift in Sources */,

@@ -10,12 +10,12 @@ import UIKit
 extension MoviesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return minhasMovies?.contents?.count ?? 0
+        return minhaMovies?.contents?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TitleFilmsTableViewCell
-        cell?.setConfigCell(object: minhasMovies?.contents?[indexPath.row])
+        cell?.setConfigCell(object: minhaMovies?.contents?[indexPath.row])
         return cell ?? UITableViewCell()
     }
 }

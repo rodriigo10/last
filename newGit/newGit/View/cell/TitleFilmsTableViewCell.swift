@@ -14,7 +14,7 @@ class TitleFilmsTableViewCell: UITableViewCell {
     @IBOutlet weak var imageTitle: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     
-    override func awakeFromNib() 
+    override func awakeFromNib() {
         super.awakeFromNib()
         
     }
@@ -31,4 +31,5 @@ class TitleFilmsTableViewCell: UITableViewCell {
         imageTitle.sd_setImage(with: setImage, completed: nil)
         labelTitle.text = object?.title ?? ""
     }
+
 }

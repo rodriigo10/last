@@ -10,17 +10,15 @@ import Alamofire
 
 class Request: NSObject {
     
-    var minhasMovies: Movies?
-
-    func request (completion: @escaping () -> Void) {
-        AF.request("https://sky-frontend.herokuapp.com/movies", method: .get).responseJSON { responseRequest in
-            if let responseRequestChecker = responseRequest.data {
-                let movies = try? JSONDecoder().decode(Movies.self, from: responseRequestChecker)
-                self.minhasMovies = movies
-                
-                completion()
+    func request (completion: @escaping(Movies?, Bool) -> Void) {
+        
+        AF.request("https://sky-frontend.herokuapp.com/movies", method: .get).responseJSON { response in
+            if let responseChecker = response.data {
+            let movies = try? JSONDecoder().decode(Movies.self, from: responseChecker)
+                completion(movies, true)
+            }else{
+                completion(nil, false)
             }
         }
     }
-    
 }
