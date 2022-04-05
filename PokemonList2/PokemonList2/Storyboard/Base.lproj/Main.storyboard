@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ga7-3l-aoh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="pokemonList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PokemonListViewController" customModule="PokemonList2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4nR-Je-Sz2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nR-Je-Sz2" secondAttribute="trailing" id="BU7-gO-lnQ"/>
+                            <constraint firstItem="4nR-Je-Sz2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BoR-LI-vkZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4nR-Je-Sz2" secondAttribute="bottom" id="PKW-UK-tDs"/>
+                            <constraint firstItem="4nR-Je-Sz2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bl6-h4-CKN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonListTableView" destination="4nR-Je-Sz2" id="A5x-Hx-HU0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="84"/>
+        </scene>
+        <!--Login Pokemon View Controller-->
+        <scene sceneID="12S-GC-Ve6">
+            <objects>
+                <viewController id="ga7-3l-aoh" customClass="LoginPokemonViewController" customModule="PokemonList2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6O-zf-tx2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="ZWv-hN-0fQ">
+                                <rect key="frame" x="0.0" y="252" width="414" height="644"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="644" id="CWJ-5U-Vvf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaV-fR-3A4">
+                                <rect key="frame" x="20" y="240" width="54" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hb9-dr-I3y"/>
+                                    <constraint firstAttribute="width" constant="54" id="xMW-eX-mwI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-jG-7L8">
+                                <rect key="frame" x="20" y="282" width="279" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="noI-nO-LGf"/>
+                                    <constraint firstAttribute="width" constant="279" id="yUD-zd-LpT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-yF-PXt">
+                                <rect key="frame" x="20" y="336" width="78" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="b0l-RF-nMm"/>
+                                    <constraint firstAttribute="width" constant="78" id="idd-Wf-bKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-GA-sMi">
+                                <rect key="frame" x="20" y="375" width="279" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="evv-zr-Skh"/>
+                                    <constraint firstAttribute="width" constant="279" id="x9Q-d0-Vez"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIz-5O-xw7">
+                                <rect key="frame" x="337" y="314" width="72" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="SMo-5N-J9A"/>
+                                    <constraint firstAttribute="width" constant="72" id="hzo-yq-Xlx"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pokeballOpen" imagePlacement="top" title="" subtitle="Play" imagePadding="1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnLogin:" destination="ga7-3l-aoh" eventType="touchUpInside" id="spY-oD-Feu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KfE-8e-PV0"/>
+                        <color key="backgroundColor" red="0.69735878709999999" green="0.23023661970000001" blue="0.2056807578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WIz-5O-xw7" firstAttribute="top" secondItem="KfE-8e-PV0" secondAttribute="top" constant="270" id="2hN-V1-bjn"/>
+                            <constraint firstItem="1RN-GA-sMi" firstAttribute="leading" secondItem="KfE-8e-PV0" secondAttribute="leading" constant="20" id="ARg-il-vUc"/>
+                            <constraint firstItem="ZWv-hN-0fQ" firstAttribute="leading" secondItem="KfE-8e-PV0" secondAttribute="leading" id="CYJ-ze-Wn1"/>
+                            <constraint firstAttribute="bottom" secondItem="ZWv-hN-0fQ" secondAttribute="bottom" id="DND-1U-RN8"/>
+                            <constraint firstItem="EaV-fR-3A4" firstAttribute="leading" secondItem="KfE-8e-PV0" secondAttribute="leading" constant="20" id="DXn-Zk-ibf"/>
+                            <constraint firstItem="KfE-8e-PV0" firstAttribute="trailing" secondItem="WIz-5O-xw7" secondAttribute="trailing" constant="5" id="Hnz-1S-q2a"/>
+                            <constraint firstItem="Hoa-jG-7L8" firstAttribute="top" secondItem="EaV-fR-3A4" secondAttribute="bottom" constant="8" symbolic="YES" id="YTh-UJ-aEg"/>
+                            <constraint firstItem="ZWv-hN-0fQ" firstAttribute="trailing" secondItem="KfE-8e-PV0" secondAttribute="trailing" id="bDu-Ks-5zv"/>
+                            <constraint firstItem="EaV-fR-3A4" firstAttribute="top" secondItem="KfE-8e-PV0" secondAttribute="top" constant="196" id="h4O-jg-HMQ"/>
+                            <constraint firstItem="Hoa-jG-7L8" firstAttribute="leading" secondItem="KfE-8e-PV0" secondAttribute="leading" constant="20" id="haJ-8j-DiQ"/>
+                            <constraint firstItem="Ns9-yF-PXt" firstAttribute="leading" secondItem="KfE-8e-PV0" secondAttribute="leading" constant="20" id="n3s-Tx-Qmu"/>
+                            <constraint firstItem="1RN-GA-sMi" firstAttribute="top" secondItem="Ns9-yF-PXt" secondAttribute="bottom" constant="5" id="sPC-dk-YGO"/>
+                            <constraint firstItem="Ns9-yF-PXt" firstAttribute="top" secondItem="Hoa-jG-7L8" secondAttribute="bottom" constant="20" id="vXi-QC-Dwr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Hoa-jG-7L8" id="jVU-oS-MAE"/>
+                        <outlet property="passwordTextField" destination="1RN-GA-sMi" id="zCN-2i-7ak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmd-LQ-lUg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781.15942028985512" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pokeball" width="894" height="894"/>
+        <image name="pokeballOpen" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
