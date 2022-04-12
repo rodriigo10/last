@@ -134,6 +134,58 @@
             </objects>
             <point key="canvasLocation" x="-781.15942028985512" y="83.705357142857139"/>
         </scene>
+        <!--Details Pokemon View Controller-->
+        <scene sceneID="V4k-lx-hIJ">
+            <objects>
+                <viewController storyboardIdentifier="pokemonDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KGn-kl-7y3" customClass="DetailsPokemonViewController" customModule="PokemonList2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ann-hD-qfu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-X1-4tv">
+                                <rect key="frame" x="129" y="94" width="156" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="igL-Ze-ZLu"/>
+                                    <constraint firstAttribute="width" constant="156" id="z3o-EM-WPV"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Czb-kC-nax">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KRq-vz-NsB">
+                                <rect key="frame" x="87" y="608" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gef-ZQ-ni1">
+                                <rect key="frame" x="20" y="315" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="koE-Ia-QjY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pmx-X1-4tv" firstAttribute="leading" secondItem="koE-Ia-QjY" secondAttribute="leading" constant="129" id="1T3-AX-kdP"/>
+                            <constraint firstItem="Pmx-X1-4tv" firstAttribute="centerX" secondItem="Ann-hD-qfu" secondAttribute="centerX" id="gd8-4A-fwD"/>
+                            <constraint firstItem="Pmx-X1-4tv" firstAttribute="top" secondItem="koE-Ia-QjY" secondAttribute="top" constant="50" id="o8i-mi-Ezb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsAbilityTableView" destination="KRq-vz-NsB" id="0Cx-Fw-KbE"/>
+                        <outlet property="detailsGamesTableView" destination="Czb-kC-nax" id="2HL-W0-4Ml"/>
+                        <outlet property="detailsImage" destination="Pmx-X1-4tv" id="00u-4Y-vIc"/>
+                        <outlet property="detailsLabel" destination="gef-ZQ-ni1" id="Ieu-1n-R2F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awH-RT-Em5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810.14492753623199" y="83.705357142857139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="pokeball" width="894" height="894"/>

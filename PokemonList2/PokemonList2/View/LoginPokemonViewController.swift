@@ -1,9 +1,3 @@
-//
-//  LoginPokemonViewController.swift
-//  PokemonList2
-//
-//  Created by Rodrigo Garcia on 05/04/22.
-//
 
 import UIKit
 import Alamofire
@@ -13,10 +7,10 @@ class LoginPokemonViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    let controller = LoginPokemonController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //    user: user@xds.com.br
-        //    pass: 223344
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -24,15 +18,14 @@ class LoginPokemonViewController: UIViewController {
     } //usando a barra de status deixando em branco.
     
     @IBAction func btnLogin(_ sender: Any) {
+        
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        
         let param = ["email":email, "password":password]
         
-        AF.request("https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/signin", method:          .post, parameters: param, encoder: JSONParameterEncoder.default).responseJSON { [weak self]        response in
-            if response.response?.statusCode == 200 {
-                
-                var pokemonList = self?.storyboard?.instantiateViewController(withIdentifier: "pokemonList")
+        controller.requestLogin(param: param) { [weak self] sucess in
+            if sucess{
+                let pokemonList = self?.storyboard?.instantiateViewController(withIdentifier: self?.controller.identifierScreen ?? "")
                 pokemonList?.modalPresentationStyle = .fullScreen
                 self?.present(pokemonList ?? UIViewController(), animated: true, completion: nil)
                 
@@ -44,12 +37,11 @@ class LoginPokemonViewController: UIViewController {
             }
         }
     }
-    
     func showAlert() {
-        let alert = UIAlertController(title: "erro", message: "a message error", preferredStyle: .alert)
+        let alert = UIAlertController(title: controller.alertTitle, message: controller.alertmessage, preferredStyle: .alert)
         
-        let okayAlert = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        let cancelAlert = UIAlertAction(title: "cancel", style: .default, handler: nil)
+        let okayAlert = UIAlertAction(title: controller.alertOkAction, style: .default, handler: nil)
+        let cancelAlert = UIAlertAction(title: controller.alertCancelAction, style: .default, handler: nil)
         
         alert.addAction(okayAlert)
         alert.addAction(cancelAlert)
@@ -57,3 +49,24 @@ class LoginPokemonViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+//
+//
+//
+//        AF.request(controller.urlId, method: .post, parameters: param, encoder: JSONParameterEncoder.default).responseJSON { [weak self] response in
+//            if response.response?.statusCode == 200 {
+//
+//                let pokemonList = self?.storyboard?.instantiateViewController(withIdentifier: self?.controller.identifierScreen ?? "")
+//                pokemonList?.modalPresentationStyle = .fullScreen
+//                self?.present(pokemonList ?? UIViewController(), animated: true, completion: nil)
+//
+//                var preferredStatusBarStyle: UIStatusBarStyle {
+//                    return .darkContent
+//                } //usando a barra de status deixando em dark novamente.
+//            }else {
+//                self?.showAlert()
+//            }
+//        }
+//    }
+//
+   

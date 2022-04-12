@@ -21,11 +21,11 @@ class PokemonListViewController: UIViewController {
     func setupTableView(){
         self.pokemonListTableView.delegate = self
         self.pokemonListTableView.dataSource = self
-        self.pokemonListTableView.register(UINib(nibName: "PokemonListTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonListCell")
+        self.pokemonListTableView.register(UINib(nibName: controller.identifierNib, bundle: nil), forCellReuseIdentifier: controller.identifierCell)
     }
     
     func pokemonlist(){
-        controller.requestPokemonList { [weak self]sucess in
+        controller.requestPokemonList { [weak self] sucess in
             if sucess {
                 self?.pokemonListTableView.reloadData()
             }else {
@@ -33,5 +33,4 @@ class PokemonListViewController: UIViewController {
             }
         }
     }
-    
 }

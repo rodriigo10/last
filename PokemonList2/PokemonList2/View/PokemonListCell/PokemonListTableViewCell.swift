@@ -24,5 +24,13 @@ class PokemonListTableViewCell: UITableViewCell {
     func pokeListCell(result: Result?){
         namePokemon.text = result?.name ?? ""
     }
+    
+    func pokeListCell(gameIndex: GameIndex?){
+        namePokemon.text = gameIndex?.version?.name ?? ""
+    }
+    
+    func pokeListCell(abilities: Ability?){
+        namePokemon.text = abilities?.ability?.name ?? ""
+    }
 }
 

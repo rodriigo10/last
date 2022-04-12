@@ -12,7 +12,8 @@ import Alamofire
 class Request: NSObject {
     
     func request(completion: @escaping (PokemonList?, Bool) -> Void){
-        AF.request("https://pokeapi.co/api/v2/pokemon/", method: .get, parameters: nil).responseJSON { response in
+        let param = ["limit":"151"]
+        AF.request("https://pokeapi.co/api/v2/pokemon/", method: .get, parameters: param ).responseJSON { response in
             if response.response?.statusCode == 200 {
                 
                 do{
